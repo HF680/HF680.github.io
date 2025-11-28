@@ -1,0 +1,5 @@
+<!-- save as assets/icons/crisp-styled.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M20 36c4-6 12-10 20-8 4 1 8 5 6 10-2 6-8 10-14 12-7 2-12 2-14-2-2-3-4-7 2-12z" />
+  <path d="M46 16l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z" />
+</svg>
