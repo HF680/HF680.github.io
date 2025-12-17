@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Produk — BasrengNampol</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="assets/images/faviconandro.png"
+    />
+    <link rel="apple-touch-icon" href="assets/images/faviconapple.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo.png" alt="logo" />
+          <span>BasrengNampol</span>
+        </a>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="produk.html" class="nav-link active">Produk</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </header>
+
+    <!-- Daftar Produk -->
+    <main>
+      <section class="container">
+        <h1 class="section-title">Daftar Produk</h1>
+        <div class="grid-3">
+          <!-- Product 1 -->
+          <article
+            class="product-card"
+            data-name="Basreng Original"
+            data-img="assets/images/cooriginal.webp"
+            data-price-50="5000"
+            data-price-100="10000"
+            data-price-200="20000"
+          >
+            <div class="image-wrap">
+              <img src="assets/images/boriginal.webp" alt="Basreng Original" />
+            </div>
+            <h3>Basreng Original</h3>
+            <p class="price">Rp5.000 / 50g</p>
+            <p>Renyah & asin pas. Cocok untuk anak kos & cemilan keluarga.</p>
+            <div class="product-actions">
+              <button class="btn-primary btn-checkout">Checkout</button>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article
+            class="product-card"
+            data-name="Basreng Pedas Jeruk"
+            data-img="assets/images/copedas.webp"
+            data-price-50="5000"
+            data-price-100="10000"
+            data-price-200="20000"
+          >
+            <div class="image-wrap">
+              <img src="assets/images/bpedas.webp" alt="Basreng Pedas Jeruk" />
+            </div>
+            <h3>Basreng Pedas Jeruk</h3>
+            <p class="price">Rp 5.000 / 50g</p>
+            <p>Perpaduan pedas dan aroma daun jeruk yang segar.</p>
+            <div class="product-actions">
+              <button class="btn-primary btn-checkout">Checkout</button>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article
+            class="product-card"
+            data-name="Basreng Balado"
+            data-img="assets/images/cobalado.webp"
+            data-price-50="5000"
+            data-price-100="10000"
+            data-price-200="20000"
+          >
+            <div class="image-wrap">
+              <img src="assets/images/bbalado.webp" alt="Basreng Balado" />
+            </div>
+            <h3>Basreng Balado</h3>
+            <p class="price">Rp 5.000 / 50g</p>
+            <p>
+              Perpaduan pedas, manis, dan gurih yang bikin susah berhenti
+              ngemil.
+            </p>
+            <div class="product-actions">
+              <button class="btn-primary btn-checkout">Checkout</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal / Popup -->
+    <div id="product-modal" class="modal" aria-hidden="true">
+      <div class="modal-overlay" data-close="true"></div>
+      <div
+        class="modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-product-name"
+      >
+        <button class="modal-close" data-close="true" aria-label="Tutup">
+          &times;
+        </button>
+        <div class="modal-body">
+          <div class="modal-image">
+            <img id="modal-product-img" src="" alt="product" />
+          </div>
+          <div class="modal-info">
+            <h2 id="modal-product-name">Nama Produk</h2>
+            <p class="modal-price" id="modal-price">Rp0</p>
+
+            <fieldset class="size-section">
+              <legend>Pilih Ukuran</legend>
+              <div class="size-options">
+                <button class="size-btn" data-size="50" type="button">
+                  50g
+                </button>
+                <button class="size-btn" data-size="100" type="button">
+                  100g
+                </button>
+                <button class="size-btn" data-size="200" type="button">
+                  200g
+                </button>
+              </div>
+            </fieldset>
+
+            <div class="qty-section">
+              <label for="qty-input">Jumlah</label>
+              <div class="qty-controls">
+                <button
+                  id="qty-decrease"
+                  type="button"
+                  aria-label="Kurangi jumlah"
+                >
+                  −
+                </button>
+                <input
+                  id="qty-input"
+                  type="number"
+                  value="1"
+                  min="1"
+                  aria-label="Jumlah produk"
+                />
+                <button
+                  id="qty-increase"
+                  type="button"
+                  aria-label="Tambah jumlah"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div class="modal-actions">
+              <a
+                id="wa-order-link"
+                class="btn-primary"
+                href="#"
+                target="_blank"
+                rel="noopener"
+                >Pesan via WhatsApp</a
+              >
+              <button class="btn-outline" data-close="true" type="button">
+                Batal
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Brand Section -->
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <img src="assets/images/logo.png" alt="BasrengNampol Logo" />
+              <span>BasrengNampol</span>
+            </a>
+            <p>
+              Basreng Pedas Daun Jeruk yang Bikin Nagih! Camilan lokal premium
+              dengan kualitas terbaik untuk semua suasana.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://wa.me/6285779025769"
+                target="_blank"
+                rel="noopener"
+                class="social-link"
+                aria-label="WhatsApp"
+              >
+                📱
+              </a>
+              <a
+                href="https://instagram.com/basrengnampol"
+                target="_blank"
+                rel="noopener"
+                class="social-link"
+                aria-label="Instagram"
+              >
+                📷
+              </a>
+              <a
+                href="https://facebook.com/basrengnampol"
+                target="_blank"
+                rel="noopener"
+                class="social-link"
+                aria-label="Facebook"
+              >
+                📘
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section">
+            <h4>Menu</h4>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="produk.html">Produk</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+
+          <!-- Products -->
+          <div class="footer-section">
+            <h4>Produk</h4>
+            <div class="footer-links">
+              <a href="produk.html">Basreng Original</a>
+              <a href="produk.html">Basreng Pedas Jeruk</a>
+              <a href="produk.html">Basreng Balado</a>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-section footer-contact">
+            <h4>Kontak</h4>
+            <p>
+              <span class="icon">📞</span>
+              <a href="https://wa.me/6285779025769">+62 857-7902-5769</a>
+            </p>
+            <p>
+              <span class="icon">✉️</span>
+              <a href="mailto:info@basrengnampol.id">info@basrengnampol.id</a>
+            </p>
+            <p>
+              <span class="icon">🕐</span>
+              <span>Senin - Minggu<br />09:00 - 20:00 WIB</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>© 2025 BasrengNampol. Made by H</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

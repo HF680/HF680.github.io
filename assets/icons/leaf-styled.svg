@@ -1,0 +1,6 @@
+<!-- save as assets/icons/leaf-styled.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 40c6-10 18-18 30-20 0 0 2 8-3 16-5 8-16 14-27 12z" />
+  <path d="M30 26c6 2 12 6 16 12" stroke-opacity="0.95"/>
+  <path d="M18 46c6-2 12-5 18-10" stroke-opacity="0.85"/>
+</svg>
