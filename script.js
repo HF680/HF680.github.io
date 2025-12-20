@@ -1,8 +1,4 @@
-// script.js — FINAL (accessible, clean, no aria-hidden warning)
 document.addEventListener("DOMContentLoaded", function () {
-  /* =========================================================
-     ACTIVE NAV LINK
-  ========================================================= */
   const links = document.querySelectorAll(".nav-link");
   links.forEach((a) => a.classList.remove("active"));
 
@@ -17,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* =========================================================
-     MOBILE NAV TOGGLE (Accessible)
+     Nav Mobile
   ========================================================= */
   (function setupMobileNavToggle() {
     const navToggle = document.querySelector(".nav-toggle");
@@ -45,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
   })();
 
   /* =========================================================
-     HEADER SHRINK + AUTO HIDE ON SCROLL
+     Header Shrink + Auto Hide Di Scroll
   ========================================================= */
   (function setupHeaderScroll() {
     const header = document.querySelector(".site-header");
@@ -83,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
   })();
 
   /* =========================================================
-     SCROLL TO TOP ON LOGO CLICK
+     Tombol Logo
   ========================================================= */
   const logo = document.querySelector(".logo");
   if (logo) {
@@ -93,9 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* =========================================================
-     PRODUCT MODAL (produk.html only)
-     — NO aria-hidden warning
-     — focus is restored correctly
+     Produk Modal
   ========================================================= */
   const modal = document.getElementById("product-modal");
   if (!modal) return;
